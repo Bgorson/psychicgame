@@ -1,14 +1,37 @@
-<doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets\css\style.css" />
+ 
 </head>
 <body>
-    
+    <div>
+    <h1>The Psychic Game</h1>
+    <p>Guess what letter I'm thinking of!</p>
+    <p id = "wintext"></p>
+    <p id = "losetext"></p>
+    <p id = "guesstext"></p>
+    <p id = "guessesleft"></p>
+    <p id = "userguesstext"></p>
+    <p id = "tryagain"></p>
+</div>
 </body>
+<script src="assets\javascript\game.js"></script>
 </html>
+
+
+
+
+<!---Word Guess-
+Text on screen: 
+Track wins/loses
+Track How many Guesses left- when it hits 0- ++lose 
+If guess correct- ++win
+Computer randomly picks a letter from array
+Write picks to the screen.
+clears the stuff after a win or lose
+-->
