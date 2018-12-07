@@ -46,18 +46,25 @@ document.onkeyup = function(event) {
    var userGuess = event.key;
  //checks if the user picked a letter
 if (letters.includes(userGuess)){
+    //checks if guess has already been picked and is in array
         if (guessesArray.includes(userGuess)) {
             tryAgainText.textContent = "you did that already, pick again";
         }
+        //if you run out of guesses- game will reset
         else if (guessesLeft == 0) {
             loses++;
             guessText.textContent= "";
             newGame();
         }
+        //if you guess incorrectly, it adds guess to array, reduces guesses and checks if last pick
         else if (userGuess !== chosenLetter) {
             guessesLeft--;
             guessesArray.push(userGuess);
             tryAgainText.textContent= "";
+                if (guessesLeft == 0) {
+                    loses++;
+                    newGame();
+                }
             }
         
             //if user is correct
@@ -73,9 +80,10 @@ if (letters.includes(userGuess)){
             userGuessText.textContent = "You've already chosen: " + guessesArray;
             guessesLeftText.textContent= "You've got " + guessesLeft +" chances left!"
         }
-    
+    //checks for uppercase, numbers or symbols
     else {
         tryAgainText.textContent = "You can only choose lowercase letters"
     }
 }
+//initates game
 newGame()
