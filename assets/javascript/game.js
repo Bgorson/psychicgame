@@ -9,7 +9,7 @@
 //Declare all variables being used
 var wins=0;
 var loses=0;
-var guessesLeft=9;
+var guessesLeft=10;
 var guessesArray= [];
 var chosenLetter;
 
@@ -44,12 +44,12 @@ function newGame() {
 //Activates on key press
 document.onkeyup = function(event) {
    var userGuess = event.key;
-   //if user is wrong and is out of guesses
+ //checks if the user picked a letter
 if (letters.includes(userGuess)){
         if (guessesArray.includes(userGuess)) {
-            tryAgainText.textContent = "you did that already, pick again"
+            tryAgainText.textContent = "you did that already, pick again";
         }
-        if (guessesLeft == 0) {
+        else if (guessesLeft == 0) {
             loses++;
             guessText.textContent= "";
             newGame();
