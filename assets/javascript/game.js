@@ -48,7 +48,7 @@ document.onkeyup = function(event) {
 if (letters.includes(userGuess)){
     //checks if guess has already been picked and is in array
         if (guessesArray.includes(userGuess)) {
-            tryAgainText.textContent = "you did that already, pick again";
+            tryAgainText.textContent = "You Did That Already, Pick Again";
         }
         //if you run out of guesses- game will reset
         else if (guessesLeft == 0) {
@@ -74,15 +74,15 @@ if (letters.includes(userGuess)){
                 newGame();
             };
         //Display scoreboard
-            guessText.textContent = "You just guessed: " + userGuess;
-            winText.textContent = "wins: " + wins;
-            loseText.textContent = "losses: " + loses;
-            userGuessText.textContent = "You've already chosen: " + guessesArray;
-            guessesLeftText.textContent= "You've got " + guessesLeft +" chances left!"
+            guessText.textContent = "You Just Guessed: " + userGuess;
+            winText.textContent = "Wins: " + wins;
+            loseText.textContent = "Losses: " + loses;
+            userGuessText.textContent = "You've Already Chosen: " + guessesArray;
+            guessesLeftText.textContent= "You've Got " + guessesLeft +" Chances Left!"
         }
     //checks for uppercase, numbers or symbols
     else {
-        tryAgainText.textContent = "You can only choose lowercase letters"
+        tryAgainText.textContent = "You Can Only Choose Lowercase Letters"
     }
 }
 //initates game
